@@ -715,3 +715,6 @@ section
 {
 	color: #7a798c;
 }
+.footer {
+    position:fixed;bottom:0;
+}
