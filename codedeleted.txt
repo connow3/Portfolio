@@ -1,0 +1,4 @@
+#1 line 52-54 under 2nd img src
+<button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
+  <i class="fa fa-download"></i> Download Resume
+</button>
