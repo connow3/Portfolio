@@ -35,7 +35,7 @@
 body
 {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 14px;
+	font-size: 31px;
 	font-weight: 400;
 	background: #FFFFFF;
 	color: #a5a5a5;
@@ -556,7 +556,7 @@ section
 }
 .about_text
 {
-	margin-top: 31px;
+	margin-top: 31f;
 	color: #565563;
 	font-size: 45px;
 }
