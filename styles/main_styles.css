@@ -525,7 +525,7 @@ section
 	font-size: 30px;
 	font-weight: 500;
 	color: #565563;
-	line-height: 1.5;
+	line-height: 1;
 }
 .main_title
 {
@@ -556,8 +556,8 @@ section
 }
 .about_text
 {
-	color: #565563;
-	font-size: 45px;
+	color: #484848;
+	font-size: 31px;
 }
 .loaders
 {
