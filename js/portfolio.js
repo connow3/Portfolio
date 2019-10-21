@@ -1,3 +1,4 @@
+// This template is from https://colorlib.com
 /* JS Document */
 
 /******************************
@@ -16,7 +17,7 @@ $(document).ready(function()
 {
 	"use strict";
 
-	/* 
+	/*
 
 	1. Vars and Inits
 
@@ -54,7 +55,7 @@ $(document).ready(function()
 	initMenu();
 	initIsotope();
 
-	/* 
+	/*
 
 	2. Set Header
 
@@ -72,7 +73,7 @@ $(document).ready(function()
 		}
 	}
 
-	/* 
+	/*
 
 	3. Init Menu
 
@@ -110,7 +111,7 @@ $(document).ready(function()
 		menuActive = false;
 	}
 
-	/* 
+	/*
 
 	4. Init Isotope Filtering
 
@@ -135,7 +136,7 @@ $(document).ready(function()
 		    	{
 			        $('.portfolio_category.active').removeClass('active');
 			        $(this).addClass('active');
-			 
+
 			        var selector = $(this).attr('data-filter');
 			        $('.portfolio_grid').isotope({
 			            filter: selector,

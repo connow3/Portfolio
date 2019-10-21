@@ -1,3 +1,4 @@
+// This template is from https://colorlib.com
 /* JS Document */
 
 /******************************
@@ -16,7 +17,7 @@ $(document).ready(function()
 {
 	"use strict";
 
-	/* 
+	/*
 
 	1. Vars and Inits
 
@@ -55,7 +56,7 @@ $(document).ready(function()
 	initMenu();
 	initLoaders();
 
-	/* 
+	/*
 
 	2. Set Header
 
@@ -73,7 +74,7 @@ $(document).ready(function()
 		}
 	}
 
-	/* 
+	/*
 
 	3. Init Menu
 
@@ -111,7 +112,7 @@ $(document).ready(function()
 		menuActive = false;
 	}
 
-	/* 
+	/*
 
 	4. Init Loaders
 

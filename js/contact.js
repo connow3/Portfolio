@@ -1,3 +1,4 @@
+// This template is from https://colorlib.com
 /* JS Document */
 
 /******************************
@@ -16,7 +17,7 @@ $(document).ready(function()
 {
 	"use strict";
 
-	/* 
+	/*
 
 	1. Vars and Inits
 
@@ -55,7 +56,7 @@ $(document).ready(function()
 	initMenu();
 	initGoogleMap();
 
-	/* 
+	/*
 
 	2. Set Header
 
@@ -73,7 +74,7 @@ $(document).ready(function()
 		}
 	}
 
-	/* 
+	/*
 
 	3. Init Menu
 
@@ -111,7 +112,7 @@ $(document).ready(function()
 		menuActive = false;
 	}
 
-	/* 
+	/*
 
 	4. Init Google Map
 
@@ -120,7 +121,7 @@ $(document).ready(function()
 	function initGoogleMap()
 	{
 		var myLatlng = new google.maps.LatLng(34.063685,-118.272936);
-    	var mapOptions = 
+    	var mapOptions =
     	{
     		center: myLatlng,
 	       	zoom: 14,
