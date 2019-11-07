@@ -17,7 +17,6 @@
 .leaflet-container {
 		overflow: hidden;
 	}
-#FloodplainSchools { width: 100%; }
 .leaflet-tile,
 .leaflet-marker-icon,
 .leaflet-marker-shadow {
