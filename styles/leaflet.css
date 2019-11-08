@@ -25,6 +25,10 @@
 	        user-select: none;
 	  -webkit-user-drag: none;
 	}
+
+	#mapid {
+  width: 100%;
+}
 /* Prevents IE11 from highlighting tiles in blue */
 .leaflet-tile::selection {
 	background: transparent;
