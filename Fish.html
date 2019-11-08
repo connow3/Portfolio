@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<p style="color:black; font-size:2em; font-family: arial">Pierce County Fish Distribution & Sensitive Area Markers<</p>
+<p style="color:black; font-size:2em; font-family: arial">Pierce County Fish Distribution & Sensitive Area Markers</p>
 
 <p style="color:black; font-size:1em; font-family: arial">This map shows the fish distribution in Pierce County and locations of permanent monuments installed on county-maintained roads marking the entrance and exit points to aquatic areas where salmonid species may be present..</p>
 
@@ -33,7 +33,7 @@
 		id: 'mapbox.streets'
 	}).addTo(mymap);
 
-L.geoJSON(Sensitive_Area_Markers).addTo(map);
+L.geoJSON(Sensitive_Area_Markers.geojson).addTo(map);
 
 </script>
 
