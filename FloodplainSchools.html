@@ -51,19 +51,22 @@
 	</div>
 </header>
 
-<div id="mapid"></div>
-<script>
-var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+<div id="map"></div>
 
-	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiY29ubm9yMDAwMCIsImEiOiJjazJwYnM0eHQwMm8xM2VteXJ3ZXd0OXEwIn0.-CAXKsJFls6ZCfjqJNch9A', {
-		maxZoom: 18,
-		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-		id: 'mapbox.streets'
-	}).addTo(mymap);
-</script>
+  <script>
 
+  // initialize the map
+  var map = L.map('map').setView([42.35, -71.08], 13);
+
+  // load a tile layer
+  L.tileLayer('http://tiles.mapc.org/basemap/{z}/{x}/{y}.png',
+    {
+      attribution: 'Tiles by <a href="http://mapc.org">MAPC</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>',
+      maxZoom: 17,
+      minZoom: 9
+    }).addTo(map);
+
+  </script>
 <div class="footer">
 <div align='center'>
 	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
