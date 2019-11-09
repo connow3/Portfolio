@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+html>
 <head>
   <title>A Leaflet map!</title>
-  <link rel="stylesheet" type="text/css" href="leaflet.css"/>
-  <script src="leaflet.js"></script>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
   <style>
-    #map{ width: 100% }
+    #map{ width: 900px; height: 500px; }
   </style>
 </head>
 <body>
@@ -15,7 +15,7 @@
   <script>
 
   // initialize the map
-  var map = L.map('map').setView([47.037884, -122.136677], 10);
+  var map = L.map('map').setView([42.35, -71.08], 13);
 
   // load a tile layer
   L.tileLayer('http://tiles.mapc.org/basemap/{z}/{x}/{y}.png',
