@@ -44,7 +44,12 @@
 	  // add GeoJSON layer to the map once the file is loaded
 	  L.geoJson(data).addTo(mymap);
 
-	L.marker([47.037884, -122.136677], {icon: L.AwesomeMarkers.icon({icon: 'spinner', markerColor: 'red', prefix: 'fa', spin:true}) }).addTo(mymap);
+		var redMarker = L.AwesomeMarkers.icon({
+	    icon: 'coffee',
+	    markerColor: 'red'
+	  });
+
+	  L.marker([47.037884, -122.136677], {icon: redMarker}).addTo(mymap);
 	});
 
 
