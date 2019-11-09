@@ -4,6 +4,7 @@
   <title>A Leaflet map!</title>
   <link rel="stylesheet" href="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.3/leaflet.css" />
   <script src="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.3/leaflet.js"></script>
+<script src="js/scripts.js"></script> 
   <style>
     #map{ width: 100%; }
   </style>
@@ -24,6 +25,12 @@
       maxZoom: 17,
       minZoom: 9
     }).addTo(map);
+
+    // load GeoJSON from an external file
+$.getJSON("rodents.geojson",function(data){
+  // add GeoJSON layer to the map once the file is loaded
+  L.geoJson(data).addTo(map);
+});
 
   </script>
 </body>
