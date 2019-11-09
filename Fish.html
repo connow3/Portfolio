@@ -33,7 +33,10 @@
 		id: 'mapbox.streets'
 	}).addTo(mymap);
 
-L.geoJSON(Sensitive_Area_Markers.geojson).addTo(mymap);
+	$.getJSON("Sensitive_Area_Markers.geojson",function(data){
+	  // add GeoJSON layer to the map once the file is loaded
+	  L.geoJson(data).addTo(mymap);
+	});
 
 </script>
 
