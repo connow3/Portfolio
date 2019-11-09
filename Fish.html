@@ -10,13 +10,17 @@
 	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
 
     <link rel="stylesheet" type="text/css" href="leaflet.css" />
-		<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
-		<link rel="stylesheet" type="text/css" href="markers.css">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		      rel="stylesheet">
+		<link rel="stylesheet" href="leaflet-beautify-marker-icon.css">
+
 		<script src="leaflet.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src=project/js/scripts.js></script>
-<script src="https://kit.fontawesome.com/aa8c41ee6b.js" crossorigin="anonymous"></script>
-<script src="markers.js"></script>
+<script src="http://marslan390.github.io/BeautifyMarker/leaflet-beautify-marker-icon.js"></script>
+
+
 </head>
 <body>
 
@@ -44,6 +48,15 @@
 	  // add GeoJSON layer to the map once the file is loaded
 	  L.geoJson(data).addTo(mymap);
 	});
+
+	L.marker([47.037884, -122.136677], { icon: L.BeautifyIcon.icon(options), draggable: true }).addTo(map).bindPopup("I'm Beautify");
+
+options = {
+		icon: 'ambulance'
+			 , borderColor: 'Red'
+			 , textColor: 'Red'
+			 , innerIconStyle: 'font-size:11px;padding-top:1px;'
+};
 
 
 </script>
