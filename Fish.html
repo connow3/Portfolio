@@ -10,12 +10,13 @@
 	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
 
     <link rel="stylesheet" type="text/css" href="leaflet.css" />
-
-			<script src="leaflet.js"></script>
+		<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+		<link rel="stylesheet" type="text/css" href="markers.css">
+		<script src="leaflet.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src=project/js/scripts.js></script>
-
-
+<script src="https://kit.fontawesome.com/aa8c41ee6b.js" crossorigin="anonymous"></script>
+<script src="markers.js"></script>
 </head>
 <body>
 
@@ -42,6 +43,7 @@
 	$.getJSON("Fish.json",function(data){
 	  // add GeoJSON layer to the map once the file is loaded
 	  L.geoJson(data).addTo(mymap);
+	});
 
 
 </script>
