@@ -50,12 +50,11 @@
   });
 	L.geoJson(data  ,{
 		pointToLayer: function(feature,latlng){
-			var marker = L.marker(latlng,{icon: marker});
-	         marker.bindPopup(feature.properties.COMMENTS);
-	         return marker;
+	  return L.marker(latlng,{icon: marker});
     }
 	}  ).addTo(mymap);
 	});
+
 
 
 	$.getJSON("Fish.json",function(data){
@@ -69,7 +68,7 @@
 
 </script>
 
-
+<p> Include references for all data you did not produce yourself, including basemap imagery, GeoJSON overlays, custom icons, etc. </p>
 
 
 </body>
