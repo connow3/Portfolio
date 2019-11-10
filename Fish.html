@@ -55,13 +55,6 @@
 	}  ).addTo(mymap);
 	});
 
-	Sensitive_Area_Markers.addListener('click', function(event) {
-	    var str = event.feature.H.COMMENTS;
-	    infowindow.setContent(str);
-	    infowindow.setPosition(event.LatLng());
-	    infowindow.open(map);
-	});
-
 
 	$.getJSON("Fish.json",function(data){
 	  // add GeoJSON layer to the map once the file is loaded
