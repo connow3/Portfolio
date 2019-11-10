@@ -36,7 +36,7 @@
 	});
 
   $.getJSON("Sensitive_Area_Markers.geojson",function(data){
-  var marker = new L.Marker.SVGMarker({
+  var marker = L.Marker.SVGMarker({
     fillColor: 'green'
     });
   L.geoJson(data  ,{
