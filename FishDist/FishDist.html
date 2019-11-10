@@ -39,7 +39,10 @@
 
   $.getJSON("Sensitive_Area_Markers.geojson",function(data){
   var marker = L.ExtraMarker.icon({
-    markerColor: 'green'
+    icon: 'fa-coffee',
+    markerColor: 'red',
+    shape: 'square',
+    prefix: 'fa'
     });
   L.geoJson(data  ,{
     pointToLayer: function(feature,latlng){
