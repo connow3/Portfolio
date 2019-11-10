@@ -40,8 +40,6 @@
 
   $.getJSON("Sensitive_Area_Markers.geojson",function(data){
   var marker = L.BeautifyIcon.icon({
-    icon: 'bus',
-    prefix: 'fa',
     backgroundColor: 'green'
   });
   L.geoJson(data  ,{
