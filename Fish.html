@@ -49,7 +49,7 @@
 	  });
 		L.geoJson(data,{
       pointToLayer: function(feature,latlng){
-        var marker = L.marker(latlng,{icon: marker);
+        var marker = L.marker(latlng,{icon: marker});
         marker.bindPopup(feature.properties.COMMENTS);
         return marker;
       }
