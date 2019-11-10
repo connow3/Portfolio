@@ -42,6 +42,14 @@
 	}).addTo(mymap);
 
 
+//
+function onEachFeature(feature, layer) {
+	// does this feature have a property named popupContent?
+	if (feature.properties && feature.properties.COMMENTS) {
+		layer.bindPopup(feature.properties.COMMENTS);
+	}
+}
+//
 
 	$.getJSON("Sensitive_Area_Markers.geojson",function(data){
 	var marker = L.AwesomeMarkers.icon({
