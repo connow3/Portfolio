@@ -49,6 +49,9 @@ function onEachFeature(feature, layer) {
 		layer.bindPopup(feature.properties.COMMENTS);
 	}
 }
+L.geoJSON(marker, {
+	onEachFeature: onEachFeature
+}).addTo(mymap);
 //
 
 	$.getJSON("Sensitive_Area_Markers.geojson",function(data){
