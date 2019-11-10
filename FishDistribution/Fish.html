@@ -13,7 +13,7 @@
 
 <link rel="stylesheet" type="text/css" href="leaflet.css" />
 <script src="leaflet.js"></script>
-<link rel="stylesheet" type="text/css" href="font-awesome.css" >
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css">
 
 
@@ -44,8 +44,7 @@
 
 	$.getJSON("Sensitive_Area_Markers.geojson",function(data){
 	var marker = L.AwesomeMarkers.icon({
-   icon: 'coffee',
-		iconColor: 'black',
+    iconColor: 'black',
     prefix: 'fa',
     markerColor: 'green'
   });
