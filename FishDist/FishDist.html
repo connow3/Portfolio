@@ -9,6 +9,11 @@
 
     <script src="jquery.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="fontawesome.css"/>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="leaflet-beautify-marker-icon.css"/>
+    <script src="leaflet-beautify-marker-icon.js"></script>
+
 </head>
 <body>
 
@@ -34,7 +39,16 @@
 	});
 
   $.getJSON("Sensitive_Area_Markers.geojson",function(data){
-    L.geoJson(data).addTo(mymap);
+  var marker = L.BeautifyIcon.icon({
+    icon: 'bus',
+    prefix: 'fa',
+    backgroundColor: 'green'
+  });
+  L.geoJson(data  ,{
+    pointToLayer: function(feature,latlng){
+    return L.marker(latlng,{icon: marker});
+    }
+  }  ).addTo(mymap);
   });
 
 
