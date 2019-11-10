@@ -46,7 +46,7 @@ L.MakiMarkers.accessToken = "pk.eyJ1IjoiY29ubm9yMDAwMCIsImEiOiJjazJwYnM0eHQwMm8x
   L.geoJson(data  ,{
     pointToLayer: function(feature,latlng){
       var marker = L.marker(latlng,{icon: mark});
-          marker.bindPopup(feature.properties.COMMENTS);
+          marker.bindPopup("Comments:" + feature.properties.COMMENTS  + '<br/>' + "Feet from fish sensitive area:" + feature.properties.DIST_FT);
           return marker;
     }
   }  ).addTo(mymap);
