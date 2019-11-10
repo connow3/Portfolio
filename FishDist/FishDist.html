@@ -33,6 +33,11 @@
 	  L.geoJson(data).addTo(mymap);
 	});
 
+  $.getJSON("Sensitive_Area_Markers.geojson",function(data){
+    L.geoJson(data).addTo(mymap);
+  });
+
+
 
 </script>
 
