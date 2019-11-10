@@ -9,9 +9,7 @@
 
     <script src="jquery.js"></script>
 
-<link rel="stylesheet" type="text/css" href="fontawesome.css"/>
-<link rel="stylesheet" type="text/css" href="leaflet.extra-markers.min.css">
-<script src="leaflet.extra-markers.min.js"></script>
+<script src="Leaflet.MakiMarkers.js"></script>
 
 </head>
 <body>
@@ -37,12 +35,13 @@
 	  L.geoJson(data).addTo(mymap);
 	});
 
+L.MakiMarkers.accessToken = "pk.eyJ1IjoiY29ubm9yMDAwMCIsImEiOiJjazJwYnM0eHQwMm8xM2VteXJ3ZXd0OXEwIn0.-CAXKsJFls6ZCfjqJNch9A";
+
   $.getJSON("Sensitive_Area_Markers.geojson",function(data){
-  var marker = L.ExtraMarker.icon({
-    icon: 'fa-coffee',
-    markerColor: 'red',
-    shape: 'square',
-    prefix: 'fa'
+  var marker = L.MakiMarkers.icon({
+    icon: "rocket",
+    color: "#b0b",
+    size: "m"
     });
   L.geoJson(data  ,{
     pointToLayer: function(feature,latlng){
@@ -51,14 +50,9 @@
   }  ).addTo(mymap);
   });
 
-  var redMarker = L.ExtraMarkers.icon({
-    icon: 'fa-coffee',
-    markerColor: 'red',
-    shape: 'square',
-    prefix: 'fa'
-  });
+  var icon = L.MakiMarkers.icon({icon: "rocket", color: "#b0b", size: "m"});
+  L.marker([47.037884, -122.136677], {icon: icon}).addTo(mymap);
 
-  L.marker([47.037884, -122.136677], {icon: redMarker}).addTo(mymap);
 
 </script>
 
