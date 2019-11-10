@@ -42,17 +42,7 @@
 	}).addTo(mymap);
 
 
-//
-function onEachFeature(feature, layer) {
-	// does this feature have a property named popupContent?
-	if (feature.properties && feature.properties.COMMENTS) {
-		layer.bindPopup(feature.properties.COMMENTS);
-	}
-}
-L.geoJSON(marker, {
-	onEachFeature: onEachFeature
-}).addTo(mymap);
-//
+
 
 	$.getJSON("Sensitive_Area_Markers.geojson",function(data){
 	var marker = L.AwesomeMarkers.icon({
@@ -67,7 +57,12 @@ L.geoJSON(marker, {
 	}  ).addTo(mymap);
 	});
 
-
+	Sensitive_Area_Markers.addListener('click', function(event) {
+	    var str = event.feature.H.COMMENTS;
+	    infowindow.setContent(str);
+	    infowindow.setPosition(event.LatLng());
+	    infowindow.open(map);
+	});
 
 
 	$.getJSON("Fish.json",function(data){
