@@ -41,6 +41,14 @@
 		id: 'mapbox.streets'
 	}).addTo(mymap);
 
+
+	function forEachFeature(feature, layer) {
+			var popupContent = "<p> <b>" + feature.properties.COMMENTS +
+ "</p>";
+
+			layer.bindPopup(popupContent);
+		}
+
 	$.getJSON("Sensitive_Area_Markers.geojson",function(data){
 		var marker = L.AwesomeMarkers.icon({
 	    iconColor: 'black',
