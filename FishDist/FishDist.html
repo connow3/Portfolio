@@ -41,7 +41,8 @@
   $.getJSON("Sensitive_Area_Markers.geojson",function(data){
   var marker = L.BeautifyIcon.icon({
     iconShape: 'marker',
-    backgroundColor: 'green'
+    backgroundColor: 'green',
+    text: ''
   });
   L.geoJson(data  ,{
     pointToLayer: function(feature,latlng){
