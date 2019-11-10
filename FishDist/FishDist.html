@@ -38,14 +38,16 @@
 L.MakiMarkers.accessToken = "pk.eyJ1IjoiY29ubm9yMDAwMCIsImEiOiJjazJwYnM0eHQwMm8xM2VteXJ3ZXd0OXEwIn0.-CAXKsJFls6ZCfjqJNch9A";
 
   $.getJSON("Sensitive_Area_Markers.geojson",function(data){
-  var marker = L.MakiMarkers.icon({
-    
+  var mark = L.MakiMarkers.icon({
+    icon: "null",
     color: "#18ca20",
     size: "s"
     });
   L.geoJson(data  ,{
     pointToLayer: function(feature,latlng){
-    return L.marker(latlng,{icon: marker});
+      var marker = L.marker(latlng,{icon: mark});
+          marker.bindPopup(feature.properties.COMMENTS);
+          return marker;
     }
   }  ).addTo(mymap);
   });
