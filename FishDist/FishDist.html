@@ -2,13 +2,17 @@
 <html>
 <head>
 
-	<title>Quick Start - Leaflet</title>
+	<title>Fish Distribution & Sensitive Area Markers in Pierce County</title>
 
     <link rel="stylesheet" type="text/css" href="leaflet.css"/>
     <script src="leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
 
 </head>
 <body>
+
+  <p style="color:black; font-size:2em; font-family: arial">Pierce County Fish Distribution & Sensitive Area Markers</p>
+
+  <p style="color:black; font-size:1em; font-family: arial">This map shows the fish distribution in Pierce County and locations of permanent monuments installed on county-maintained roads marking the entrance and exit points to aquatic areas where salmonid species may be present.</p>
 
 <div id="mapid" style="width: 1200px; height: 600px;"></div>
 <script>
@@ -23,7 +27,11 @@
 		id: 'mapbox.streets'
 	}).addTo(mymap);
 
+L.geoJSON(Fish).addTo(mymap);
+
 </script>
+
+<p> Include references for all data you did not produce yourself, including basemap imagery, GeoJSON overlays, custom icons, etc. </p>
 
 </body>
 </html>
