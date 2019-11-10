@@ -48,9 +48,11 @@
     prefix: 'fa',
     markerColor: 'green'
   });
-	L.geoJson(data  ,{
-		pointToLayer: function(feature,latlng){
-	  return L.marker(latlng,{icon: marker});
+	L.geoJson({
+	    onEachFeature: function(feature, layer) {
+	        //use feature.properties to construct popup html
+	        var popupContent = 'Wateryway: ' + feature.properties.COMMENTS;
+	        layer.bindPopup(popupContent);
     }
 	}  ).addTo(mymap);
 	});
