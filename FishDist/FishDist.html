@@ -27,7 +27,9 @@
 		id: 'mapbox.streets'
 	}).addTo(mymap);
 
-L.geoJSON(Fish).addTo(mymap);
+  $.getJSON("Fish.json",function(data){
+	    L.geoJson(data).addTo(mymap);
+	});
 
 </script>
 
