@@ -9,7 +9,9 @@
 
     <script src="jquery.js"></script>
 
-<script src="svg-icon.js"></script>
+<link rel="stylesheet" type="text/css" href="fontawesome.css"/>
+<link rel="stylesheet" type="text/css" href="leaflet.extra-markers.min.css">
+<script src="leaflet.extra-markers.min.js"></script>
 
 </head>
 <body>
@@ -36,8 +38,8 @@
 	});
 
   $.getJSON("Sensitive_Area_Markers.geojson",function(data){
-  var marker = L.Marker.SVGMarker({
-    fillColor: 'green'
+  var marker = L.ExtraMarker.icon({
+    markerColor: 'green'
     });
   L.geoJson(data  ,{
     pointToLayer: function(feature,latlng){
@@ -46,7 +48,14 @@
   }  ).addTo(mymap);
   });
 
+  var redMarker = L.ExtraMarkers.icon({
+    icon: 'fa-coffee',
+    markerColor: 'red',
+    shape: 'square',
+    prefix: 'fa'
+  });
 
+  L.marker([47.037884, -122.136677], {icon: redMarker}).addTo(mymap);
 
 </script>
 
