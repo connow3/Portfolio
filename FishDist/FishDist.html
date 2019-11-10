@@ -35,7 +35,7 @@
     L.geoJson(data  ,{
       pointToLayer: function(feature,latlng){
         var mark1 = L.marker(latlng);
-            marker.bindPopup("Stream Name: " + feature.properties.LLID_STRM_ + '<br/>' + "Species: " + feature.properties.SPECIES + '<br/>' + "Distribution Type: " + feature.properties.DISTTYPE_D + '<br/>' + "Use Type: " + feature.properties.USETYPE_DE + '<br/>' + "Life History: " + feature.properties.LIFEHIST_D);
+            mark1.bindPopup("Stream Name: " + feature.properties.LLID_STRM_ + '<br/>' + "Species: " + feature.properties.SPECIES + '<br/>' + "Distribution Type: " + feature.properties.DISTTYPE_D + '<br/>' + "Use Type: " + feature.properties.USETYPE_DE + '<br/>' + "Life History: " + feature.properties.LIFEHIST_D);
             return mark1;
       }
     }  ).addTo(mymap);
