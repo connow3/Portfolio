@@ -39,9 +39,9 @@ L.MakiMarkers.accessToken = "pk.eyJ1IjoiY29ubm9yMDAwMCIsImEiOiJjazJwYnM0eHQwMm8x
 
   $.getJSON("Sensitive_Area_Markers.geojson",function(data){
   var marker = L.MakiMarkers.icon({
-    icon: "rocket",
-    color: "#b0b",
-    size: "m"
+    icon: "aquarium",
+    color: "#18ca20",
+    size: "s"
     });
   L.geoJson(data  ,{
     pointToLayer: function(feature,latlng){
@@ -49,10 +49,6 @@ L.MakiMarkers.accessToken = "pk.eyJ1IjoiY29ubm9yMDAwMCIsImEiOiJjazJwYnM0eHQwMm8x
     }
   }  ).addTo(mymap);
   });
-
-  var icon = L.MakiMarkers.icon({icon: "rocket", color: "#b0b", size: "m"});
-  L.marker([47.037884, -122.136677], {icon: icon}).addTo(mymap);
-
 
 </script>
 
