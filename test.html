@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    html, body, #map {
+      height: 100%;
+    }
+
+  </style>
+  <!--<script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>-->
+  <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
+  <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+</head>
+<body>
+  <div id="map"></div>
+  <script>
+
+  L.mapbox.accessToken = 'pk.eyJ1IjoiY29ubm9yMDAwMCIsImEiOiJjazJwYnM0eHQwMm8xM2VteXJ3ZXd0OXEwIn0.-CAXKsJFls6ZCfjqJNch9A';
+
+  var mapTiles = L.tileLayer('http://a.tiles.mapbox.com/v3/map/{z}/{x}/{y}.png', {
+    maxZoom: 18
+  });
+
+  $.getJSON("Sensitive_Area_Markers.geojson", function(data) {
+
+    function onEachFeature(feature, layer) {
+
+        layer.bindPopup("Waterway" + feature.properties.COMMENTS);
+    }   
+
+    var geojson = L.geoJson(data, {
+      onEachFeature: onEachFeature
+    });
+
+
+    var map = L.map('map').fitBounds(geojson.getBounds());
+    mapTiles.addTo(map);
+    geojson.addTo(map);
+  });
+
+  </script>
+</body>
+</html>
