@@ -47,14 +47,12 @@
 	    prefix: 'fa',
 	    markerColor: 'green'
 	  });
-		L.geoJson(data,{
-      pointToLayer: function(feature,latlng){
-        var marker = L.marker(latlng,{icon: marker});
-        marker.bindPopup(feature.properties.COMMENTS);
-        return marker;
-      }
-    }).addTo(map);
-  });
+		L.geoJson(data  ,{
+			pointToLayer: function(feature,latlng){
+		  return L.marker(latlng,{icon: marker});
+	    }
+		}  ).addTo(mymap);
+		});
 
 
 
