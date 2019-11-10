@@ -42,22 +42,18 @@
 	}).addTo(mymap);
 
 
-	function forEachFeature(feature, layer) {
-			var popupContent = "<p> <b>" + feature.properties.Comments +
- "</p>";
-
-			layer.bindPopup(popupContent);
-		}
-
 	$.getJSON("Sensitive_Area_Markers.geojson",function(data){
 		var marker = L.AwesomeMarkers.icon({
-	    iconColor: 'black',
+			icon: 'marker',
+		  iconColor: 'black',
 	    prefix: 'fa',
 	    markerColor: 'green'
 	  });
 		L.geoJson(data  ,{
 			pointToLayer: function(feature,latlng){
-		  return L.marker(latlng,{icon: marker});
+				var marker = L.marker(latlng,{icon: marker});
+	        marker.bindPopup(feature.properties.COMMENTS + '<br/>' + feature.properties.COMMENTS);
+	        return marker;
 	    }
 		}  ).addTo(mymap);
 		});
