@@ -23,7 +23,7 @@
 
   L.mapbox.accessToken = 'pk.eyJ1IjoiY29ubm9yMDAwMCIsImEiOiJjazJwYnM0eHQwMm8xM2VteXJ3ZXd0OXEwIn0.-CAXKsJFls6ZCfjqJNch9A';
 
-  var mapTiles = L.tileLayer('http://a.tiles.mapbox.com/v3/map/{z}/{x}/{y}.png', {
+  var mapTiles = L.tileLayer('http://a.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
     maxZoom: 18
   });
 
@@ -32,7 +32,7 @@
     function onEachFeature(feature, layer) {
 
         layer.bindPopup("Waterway" + feature.properties.COMMENTS);
-    }   
+    }
 
     var geojson = L.geoJson(data, {
       onEachFeature: onEachFeature
