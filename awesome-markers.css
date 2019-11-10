@@ -7,7 +7,7 @@ Version: 1.0
 /* Marker setup */
 .awesome-marker {
   background: url('images/markers-soft.png') no-repeat 0 0;
-  width: 17.5px;
+  width: 17px;
   height: 23px;
   position:absolute;
   left:0;
