@@ -9,10 +9,10 @@
 
     <script src="jquery.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="fontawesome.css"/>
-    <link rel="stylesheet" type="text/css" href="bootstrap.css"/>
-    <link rel="stylesheet" type="text/css" href="leaflet-beautify-marker-icon.css"/>
-    <script src="leaflet-beautify-marker-icon.js"></script>
+<link rel="stylesheet" type="text/css" href="ionicons.min.css"/>
+<link rel="stylesheet" href="leaflet.awesome-markers.css">
+<script src="leaflet.awesome-markers.js"></script>
+
 
 </head>
 <body>
@@ -39,10 +39,9 @@
 	});
 
   $.getJSON("Sensitive_Area_Markers.geojson",function(data){
-  var marker = L.BeautifyIcon.icon({
-    iconShape: 'marker',
-    backgroundColor: 'green',
-    icon: 'leaf'
+  var marker = L.AwesomeMarkers.icon({
+    markerColor: 'green',
+    icon: 'home'
   });
   L.geoJson(data  ,{
     pointToLayer: function(feature,latlng){
