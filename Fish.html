@@ -42,21 +42,17 @@
 	}).addTo(mymap);
 
 
-	$.getJSON("Sensitive_Area_Markers.geojson",function(data){
-		var marker = L.AwesomeMarkers.icon({
-			icon: 'marker',
-		  iconColor: 'black',
-	    prefix: 'fa',
-	    markerColor: 'green'
-	  });
-		L.geoJson(data  ,{
-			pointToLayer: function(feature,latlng){
-				var marker = L.marker(latlng,{icon: marker});
-	        marker.bindPopup(feature.properties.COMMENTS + '<br/>' + feature.properties.COMMENTS);
-	        return marker;
-	    }
-		}  ).addTo(mymap);
-		});
+
+  $.getJSON("Sensitive_Area_Markers.geojson", function(data) {
+    function onEachFeature(feature, layer) {
+          layer.bindPopup("Name of Waterway:" + feature.properties.COMMENTS);
+    }
+    var geojson = L.geoJson(data, {
+      onEachFeature: onEachFeature
+    });
+    var map = L.map('mapid').fitBounds(geojson.getBounds());
+    geojson.addTo(mymap);
+  });
 
 
 
