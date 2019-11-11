@@ -32,11 +32,8 @@
 	}).addTo(mymap);
 
   $.getJSON("Fish.json",function(data){
-    L.geoJson(data  ,{
-      marker.bindPopup("Stream Name: " + feature.properties.LLID_STRM_ + '<br/>' + "Species: " + feature.properties.SPECIES + '<br/>' + "Distribution Type: " + feature.properties.DISTTYPE_D + '<br/>' + "Use Type: " + feature.properties.USETYPE_DE + '<br/>' + "Life History: " + feature.properties.LIFEHIST_D);
-            }
-    }  ).addTo(mymap);
-    });
+	  L.geoJson(data).addTo(mymap);
+	});
 
 L.MakiMarkers.accessToken = "pk.eyJ1IjoiY29ubm9yMDAwMCIsImEiOiJjazJwYnM0eHQwMm8xM2VteXJ3ZXd0OXEwIn0.-CAXKsJFls6ZCfjqJNch9A";
 
