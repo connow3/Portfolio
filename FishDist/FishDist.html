@@ -32,6 +32,7 @@
 	}).addTo(mymap);
 
   $.getJSON("Fish.json",function(data){
+    bindPopup("Hello!")
 	  L.geoJson(data).addTo(mymap);
 	});
 
