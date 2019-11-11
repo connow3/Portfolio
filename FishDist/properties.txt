@@ -1,1 +1,6 @@
 "Stream Name: " + feature.properties.LLID_STRM_ + '<br/>' + "Species: " + feature.properties.SPECIES + '<br/>' + "Distribution Type: " + feature.properties.DISTTYPE_D + '<br/>' + "Use Type: " + feature.properties.USETYPE_DE + '<br/>' + "Life History: " + feature.properties.LIFEHIST_D
+
+$.getJSON("Fish.json",function(data){
+  var layer = L.geoJson(data).bindPopup("properties.LLID_STRM_")
+  .addTo(mymap);
+});
