@@ -32,8 +32,9 @@
 	}).addTo(mymap);
 
   $.getJSON("Fish.json",function(data){
-    bindPopup("Hello!")
-	  L.geoJson(data).addTo(mymap);
+    L.geoJson(data).bindPopup('Hello!')
+
+    .addTo(mymap);
 	});
 
 L.MakiMarkers.accessToken = "pk.eyJ1IjoiY29ubm9yMDAwMCIsImEiOiJjazJwYnM0eHQwMm8xM2VteXJ3ZXd0OXEwIn0.-CAXKsJFls6ZCfjqJNch9A";
