@@ -12,7 +12,7 @@
 		<script>
 			//copy your access token here
 			mapboxgl.accessToken = 'pk.eyJ1IjoiY29ubm9yMDAwMCIsImEiOiJjazJwYnM0eHQwMm8xM2VteXJ3ZXd0OXEwIn0.-CAXKsJFls6ZCfjqJNch9A';
-			
+
 			var map = new mapboxgl.Map({
 	  container: 'map', // HTML container id
 	  style: 'mapbox://styles/mapbox/streets-v9', // style URL
@@ -20,8 +20,12 @@
 	  zoom: 13
 	});
 
+    var popup = new mapboxgl.Popup()
+    .setHTML('<h3>Reykjavik Roasters</h3><p>A good coffee shop</p>');
+
 	var marker = new mapboxgl.Marker()
 	.setLngLat([-21.9270884, 64.1436456])
+	.setPopup(popup)
 	.addTo(map);
 		</script>
 	</body>
