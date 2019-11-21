@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+		<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+		<style>
+		#map {height: 95vh;}
+		</style>
+	</head>
+
+	<body>
+		<!-- create div for the map and define its height and width here -->
+			<div id='map'></div>
+		<!-- JS code for the map goes here -->
+		<script>
+			//copy your access token here
+			mapboxgl.accessToken = 'yourAccessTokenHere';
+
+			var map = new mapboxgl.Map({
+			  container: 'map', // HTML container id
+			  style: 'yourStyleURLHere', // style URL
+			  center: [-21.9270884, 64.1436456], // starting position as [lng, lat]
+			  zoom: 13
+			});
+
+			var popup = new mapboxgl.Popup()
+			    .setHTML('<h3>Reykjavik Roasters</h3><p>A good coffee shop</p>');
+
+			var marker = new mapboxgl.Marker()
+				.setLngLat([-21.9270884, 64.1436456])
+				.setPopup(popup)
+				.addTo(map);
+		</script>
+	</body>
+</html>
