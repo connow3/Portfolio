@@ -9,7 +9,7 @@
 	<body>
 		<!-- the div for the map -->
 		<!-- note the style is in-line, though we have typically been putting it in the header or an external file. Outcome is the same -->
-		<div id='map' style='width: 90vw; height: 75vh;'></div>
+		<div id='map' style='width: 90vw; height: 95vh;'></div>
 		<!-- the script that controls the map -->
 		<script>
 			//my Mapbox token
@@ -19,8 +19,8 @@
 			var map = new mapboxgl.Map({
 			    container: 'map',
 			    style: 'mapbox://styles/mapbox/streets-v9', // stylesheet location
-			    center: [-122, 47], // starting position [lng, lat]
-			    zoom: 9 // starting zoom
+			    center: [40.866667, 34.566667], // starting position [lng, lat]
+			    zoom: 1.2 // starting zoom
 			});
 
 			//on map load, run function to load the geojson
@@ -45,7 +45,7 @@
 						var coordinates = e.features[0].geometry.coordinates;
 						//2. create the information that will display in the popup
 						var description = e.features[0].properties.mag;
-						var description = "<h3>"+e.features[0].properties.title+"</h3>"+"<p>Magnitude: " + e.features[0].properties.mag + "<br>Status: " + e.features[0].properties.status + "<br> Tsunami: " + e.features[0].properties.tsunami + "</p>";
+						var description = "<h3>"+e.features[0].properties.title+"</h3>"+"<p>Magnitude: " + e.features[0].properties.mag + "<br>Status: " + e.features[0].properties.status + "<br> Tsunami: " + e.features[0].properties.tsunami + "<br>Details: " + "<a target='_blank' href='" + e.features[0].properties.detail + "'>Click here</a>";
 						//3. make the popup
 						new mapboxgl.Popup()
 										.setLngLat(coordinates)
