@@ -75,14 +75,14 @@
 						});
 
 						//on map load, run function to load the geojson
-						map.on('load', function(){
+						map2.on('load', function(){
 							//add a source layer for earthquakes
-							map.addSource('earthquakes', {
+							map2.addSource('earthquakes', {
 										"type": "geojson",
 										"data": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojson"
 								});
 								//add the earthquakes to the map
-								map.addLayer({
+								map2.addLayer({
 									"id":"equakes",
 									"type":"circle",
 									"source":"earthquakes"
@@ -91,7 +91,7 @@
 
 						//add a handler for clicking/popups
 						//Thanks to: https://www.mapbox.com/mapbox-gl-js/example/popup-on-click/
-						map.on('click', 'equakes', function (e) {
+						map2.on('click', 'equakes', function (e) {
 									//1. set the coordinates of the popup
 									var coordinates = e.features[0].geometry.coordinates;
 									//2. create the information that will display in the popup
