@@ -59,15 +59,15 @@
 			});
 
 					</script>
-					
-					<div id='map' style='width: 90vw; height: 95vh;'></div>
+
+					<div id='map2' style='width: 90vw; height: 95vh;'></div>
 					<!-- the script that controls the map -->
 					<script>
 						//my Mapbox token
 						mapboxgl.accessToken = 'pk.eyJ1IjoiY29ubm9yMDAwMCIsImEiOiJjazJwYnM0eHQwMm8xM2VteXJ3ZXd0OXEwIn0.-CAXKsJFls6ZCfjqJNch9A';
 
 						//The map variable, set initial style, center/zoom
-						var map = new mapboxgl.Map({
+						var map2 = new mapboxgl.Map({
 						    container: 'map',
 						    style: 'mapbox://styles/connor0000/ck36m9eqa17y81cnnyvaa7xrr', // stylesheet location
 						    center: [40.866667, 34.566667], // starting position [lng, lat]
@@ -101,7 +101,7 @@
 									new mapboxgl.Popup()
 													.setLngLat(coordinates)
 													.setHTML(description)
-													.addTo(map);
+													.addTo(map2);
 						});
 
 
