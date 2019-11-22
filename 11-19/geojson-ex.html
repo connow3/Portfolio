@@ -73,6 +73,23 @@
 								center: [40.866667, 34.566667], // starting position [lng, lat]
 								zoom: 1.2 // starting zoom
 						});
+
+						var url = 'https://wanderdrone.appspot.com/';
+maptwo.on('load', function () {
+window.setInterval(function() {
+maptwo.getSource('drone').setData(url);
+}, 2000);
+
+maptwo.addSource('drone', { type: 'geojson', data: url });
+maptwo.addLayer({
+"id": "drone",
+"type": "symbol",
+"source": "drone",
+"layout": {
+"icon-image": "rocket-15"
+}
+});
+});
 </script>
 
 
