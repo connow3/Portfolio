@@ -60,6 +60,20 @@
 
 					</script>
 
+					<div id='maptwo' style='width: 90vw; height: 95vh;'></div>
+					<!-- the script that controls the map -->
+					<script>
+						//my Mapbox token
+						mapboxgl.accessToken = 'pk.eyJ1IjoiY29ubm9yMDAwMCIsImEiOiJjazJwYnM0eHQwMm8xM2VteXJ3ZXd0OXEwIn0.-CAXKsJFls6ZCfjqJNch9A';
+
+						//The map variable, set initial style, center/zoom
+						var maptwo = new mapboxgl.Map({
+								container: 'maptwo',
+								style: 'mapbox://styles/connor0000/ck36m9eqa17y81cnnyvaa7xrr', // stylesheet location
+								center: [40.866667, 34.566667], // starting position [lng, lat]
+								zoom: 1.2 // starting zoom
+						});
+</script>
 
 
 	</body>
