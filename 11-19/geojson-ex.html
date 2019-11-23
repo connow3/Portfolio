@@ -70,26 +70,11 @@
 						var maptwo = new mapboxgl.Map({
 								container: 'maptwo',
 								style: 'mapbox://styles/connor0000/ck3b0gc3g1n5k1cph0b2bnv28', // stylesheet location
-								center: [40.866667, 34.566667], // starting position [lng, lat]
-								zoom: 1.2 // starting zoom
+								center: [-98.579523, 39.82819], // starting position [lng, lat]
+								zoom: 4 // starting zoom
 						});
 
-						var url = 'https://wanderdrone.appspot.com/';
-maptwo.on('load', function () {
-window.setInterval(function() {
-maptwo.getSource('drone').setData(url);
-}, 2000);
 
-maptwo.addSource('drone', { type: 'geojson', data: url });
-maptwo.addLayer({
-"id": "drone",
-"type": "symbol",
-"source": "drone",
-"layout": {
-"icon-image": "rocket-15"
-}
-});
-});
 </script>
 
 
