@@ -516,6 +516,7 @@ section
 	height: 100%;
 	padding-left: 82px;
 	padding-right: 30px;
+	clear: both;
 }
 .main_title_container
 {
