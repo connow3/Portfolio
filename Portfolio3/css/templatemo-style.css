@@ -423,7 +423,7 @@ h3.profile-title {
 .banner-bg {
   padding: 100px 80px;
   position: relative;
-  background: url("../img/7.jpg");
+  background: url("../img/70.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -517,7 +517,7 @@ h3.profile-title {
   padding: 30px;
 }
 .project-hover h5 {
-  font-size: 20px;
+  font-size: 24px;
   margin-bottom: 15px;
   color: white;
 }
