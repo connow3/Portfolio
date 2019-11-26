@@ -247,7 +247,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h4.widget-title {
-  font-size: 36px;
+  font-size: 48px;
   font-family: 'robotobold';
   text-transform: uppercase;
   margin-bottom: 40px;
@@ -321,7 +321,7 @@ h3.profile-title {
   padding: 15px 40px;
   display: block;
   color: white;
-  font-size: 14px;
+  font-size: 20px;
 }
 .main-navigation li a i {
   margin-right: 15px;
@@ -346,7 +346,7 @@ h3.profile-title {
   margin-right: 20px;
 }
 .social-icons a {
-  font-size: 18px;
+  font-size: 36px;
   color: white;
 }
 .social-icons a:hover {
@@ -445,7 +445,7 @@ h3.profile-title {
   z-index: 4;
 }
 .welcome-text h2 {
-  font-size: 42px;
+  font-size: 48px;
   font-family: 'robotobold';
   color: white;
   margin-bottom: 30px;
