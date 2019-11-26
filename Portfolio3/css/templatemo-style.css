@@ -252,6 +252,12 @@ h4.widget-title {
   text-transform: uppercase;
   margin-bottom: 40px;
 }
+h5.widget-title {
+  font-size: 48px;
+  font-family: 'robotobold';
+  margin-bottom: 0px;
+  margin-top: 10px;
+  }
 
 hr {
   position: relative;
