@@ -255,7 +255,7 @@ h4.widget-title {
 h5.widget-title {
   font-size: 40px;
   font-family: 'robotobold';
-  margin-bottom: 0px;
+  margin-bottom: 20px;
   margin-top: 20px;
   }
   h6.widget-title {
@@ -483,7 +483,7 @@ h3.profile-title {
 .projects-holder {
   margin-right: 0;
   margin-left: 0;
-  margin-top: 40px;
+  margin-top: 0px;
 }
 .projects-holder .col-md-4,
 .projects-holder .col-md-4 {
