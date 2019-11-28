@@ -511,7 +511,22 @@ h3.profile-title {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 40px;
+  top: 10px;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  visibility: 0;
+  -webkit-transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -ms-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+.project-hover1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 10px;
   left: 0;
   background: rgba(0, 0, 0, 0.9);
   opacity: 0;
@@ -527,13 +542,24 @@ h3.profile-title {
   width: 100%;
   left: 0;
   bottom: 0;
-  padding: 30px;
+  padding: 10px;
+}
+.project-hovers .inside {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+
 }
 .project-hover h5 {
   font-size: 36px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   color: white;
 }
+
+
+
 .project-hover h5 a {
   color: white;
 }
