@@ -31,7 +31,7 @@
 		id: 'mapbox.streets'
 	}).addTo(mymap);
 
-  $.getJSON("Fish.json",function(data){
+  $.getJSON("Tsunami_Hazard_Areas.json",function(data){
     var layer = L.geoJSON(data, {
     onEachFeature: function (feature, layer) {
       layer.bindPopup("Study Area: " + feature.properties.STUDY_AREA + '<br/>' + "Tsunami Scenario Description: " + feature.properties.TSUNAMI_SCENARIO_DESCRIPTION + '<br/>' + "Tsunami Scenario Name: " + feature.properties.TSUNAMI_SCENARIO_NAME + '<br/>');
