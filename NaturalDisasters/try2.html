@@ -4,7 +4,6 @@
 <title>Add styles made with Mapbox Studio using styleLayer</title>
 <script src='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.js'></script>
 <link href='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.css' rel='stylesheet' />
- <script src="leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
  <script src="jquery.js"></script>
  </head>
 <body>
@@ -22,14 +21,11 @@ var map = L.mapbox.map('map')
 L.mapbox.styleLayer('mapbox://styles/connor0000/ck3m4jiiw3asr1cql3g0kwtg8').addTo(map);
 
 
-var myStyle = { 
-    "color": "#ff0000"
-};
 
   $.getJSON("try84.geojson",function(data){
     var layer = L.geoJSON(data, {
     
-    style: myStyle
+    
 
     onEachFeature: function (feature, layer) {
       layer.bindPopup("Study Area: " + feature.properties.STUDY_AREA + '<br/>' + "Tsunami Scenario Description: " + feature.properties.TSUNAMI_SCENARIO_DESCRIPTION + '<br/>' + "Tsunami Scenario Name: " + feature.properties.TSUNAMI_SCENARIO_NAME + '<br/>');
