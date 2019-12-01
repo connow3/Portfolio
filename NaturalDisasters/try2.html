@@ -5,6 +5,7 @@
 <script src='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.js'></script>
 <link href='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.css' rel='stylesheet' />
  <script src="jquery.js"></script>
+ <script src="leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
 </head>
 <body>
 
@@ -21,9 +22,9 @@ var map = L.mapbox.map('map')
 L.mapbox.styleLayer('mapbox://styles/connor0000/ck3m4jiiw3asr1cql3g0kwtg8').addTo(map);
 
 
-var myStyle = {
-    "color": "#ff7800"
-    };
+var myStyle = { 
+    "color": "#ff0000"
+};
 
   $.getJSON("try84.geojson",function(data){
     var layer = L.geoJSON(data, {
