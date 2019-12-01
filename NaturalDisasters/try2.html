@@ -19,12 +19,12 @@
 <script>
 L.mapbox.accessToken = 'pk.eyJ1IjoiY29ubm9yMDAwMCIsImEiOiJjazJwYnM0eHQwMm8xM2VteXJ3ZXd0OXEwIn0.-CAXKsJFls6ZCfjqJNch9A';
 var map = L.mapbox.map('map')
-    .setView([47.649923, -123.418122], 8);
+    .setView([47.649923, -123.418122], 7.5);
 
 // Add tiles from the Mapbox Static Tiles API
 // (https://docs.mapbox.com/api/maps/#static-tiles)
 // Tiles are 512x512 pixels and are offset by 1 zoom level
-L.mapbox.styleLayer('mapbox://styles/examples/cji3d7gpt1i8m2rn7l7w0vl99').addTo(map);
+L.mapbox.styleLayer('mapbox://styles/connor0000/ck3m4jiiw3asr1cql3g0kwtg8').addTo(map);
 
   $.getJSON("try84.geojson",function(data){
     var layer = L.geoJSON(data, {
