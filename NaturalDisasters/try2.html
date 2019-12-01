@@ -20,8 +20,16 @@ var map = L.mapbox.map('map')
 // Tiles are 512x512 pixels and are offset by 1 zoom level
 L.mapbox.styleLayer('mapbox://styles/connor0000/ck3m4jiiw3asr1cql3g0kwtg8').addTo(map);
 
+
+var myStyle = {
+    "color": "#ff7800",
+    };
+
   $.getJSON("try84.geojson",function(data){
     var layer = L.geoJSON(data, {
+    
+    style: myStyle
+
     onEachFeature: function (feature, layer) {
       layer.bindPopup("Study Area: " + feature.properties.STUDY_AREA + '<br/>' + "Tsunami Scenario Description: " + feature.properties.TSUNAMI_SCENARIO_DESCRIPTION + '<br/>' + "Tsunami Scenario Name: " + feature.properties.TSUNAMI_SCENARIO_NAME + '<br/>');
     }
