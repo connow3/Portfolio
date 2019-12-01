@@ -35,23 +35,24 @@ L.mapbox.styleLayer('mapbox://styles/connor0000/ck3m4jiiw3asr1cql3g0kwtg8').addT
   });
 </script>
 
-<div id='mapidtwo' style="width: 1200px; height: 600px;"s></div>
+<div id='map' style="width: 1200px; height: 600px;"s></div>
+
 <script>
 L.mapbox.accessToken = 'pk.eyJ1IjoiY29ubm9yMDAwMCIsImEiOiJjazJwYnM0eHQwMm8xM2VteXJ3ZXd0OXEwIn0.-CAXKsJFls6ZCfjqJNch9A';
-var maptwo = L.mapbox.map('mapidtwo')
+var map = L.mapbox.map('map')
     .setView([47.649923, -123.418122], 7);
 
 // Add tiles from the Mapbox Static Tiles API
 // (https://docs.mapbox.com/api/maps/#static-tiles)
 // Tiles are 512x512 pixels and are offset by 1 zoom level
-L.mapbox.styleLayer('mapbox://styles/connor0000/ck3m4jiiw3asr1cql3g0kwtg8').addTo(maptwo);
+L.mapbox.styleLayer('mapbox://styles/connor0000/ck3m4jiiw3asr1cql3g0kwtg8').addTo(map);
 
   $.getJSON("try84.geojson",function(data){
     var layer = L.geoJSON(data, {
     onEachFeature: function (feature, layer) {
       layer.bindPopup("Study Area: " + feature.properties.STUDY_AREA + '<br/>' + "Tsunami Scenario Description: " + feature.properties.TSUNAMI_SCENARIO_DESCRIPTION + '<br/>' + "Tsunami Scenario Name: " + feature.properties.TSUNAMI_SCENARIO_NAME + '<br/>');
     }
-  }).addTo(maptwo);
+  }).addTo(map);
   });
 </script>
 
