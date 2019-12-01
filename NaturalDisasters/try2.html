@@ -31,11 +31,12 @@ L.mapbox.styleLayer('mapbox://styles/connor0000/ck3m4jiiw3asr1cql3g0kwtg8').addT
   }).addTo(map);
   });
 
-  $.getJSON("volcanic.geojson",function(data){
+  $.getJSON("volcanoes.geojson",function(data){
     var layer = L.geoJSON(data, {
-    
-   
-  }).addTo(map);
+     onEachFeature: function (feature, layer) {
+      layer.bindPopup("Volcano Name: " + feature.properties.Title + '<br/>' + "Eruption Period: " + feature.properties.TIMEFRAME + '<br/>' + "Information: " + feature.properties.Popup);
+    }
+     }).addTo(map);
   });
 </script>
 
