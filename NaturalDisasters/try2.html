@@ -35,7 +35,7 @@ L.mapbox.styleLayer('mapbox://styles/connor0000/ck3m4jiiw3asr1cql3g0kwtg8').addT
     var layerd = L.geoJSON(data, {
     
      onEachFeature: function (feature, layer) {
-      layerd.bindPopup("Study Area: " + feature.properties.STUDY_AREA + '<br/>' + "Tsunami Scenario Description: " + feature.properties.TSUNAMI_SCENARIO_DESCRIPTION + '<br/>' + "Tsunami Scenario Name: " + feature.properties.TSUNAMI_SCENARIO_NAME + '<br/>');
+      layer.bindPopup("Study Area: " + feature.properties.STUDY_AREA + '<br/>' + "Tsunami Scenario Description: " + feature.properties.TSUNAMI_SCENARIO_DESCRIPTION + '<br/>' + "Tsunami Scenario Name: " + feature.properties.TSUNAMI_SCENARIO_NAME + '<br/>');
     }
   }).addTo(map);
   });
