@@ -8,12 +8,12 @@
  </head>
 <body>
 
-<div id='map' style="width: 1200px; height: 600px;"></div>
+<center><div id='map' style="width: 600px; height: 700px;"></div></center>
 
 <script>
 L.mapbox.accessToken = 'pk.eyJ1IjoiY29ubm9yMDAwMCIsImEiOiJjazJwYnM0eHQwMm8xM2VteXJ3ZXd0OXEwIn0.-CAXKsJFls6ZCfjqJNch9A';
 var map = L.mapbox.map('map')
-    .setView([47.649923, -123.418122], 7);
+    .setView([47.649923, -123.418122], 8);
 
 L.mapbox.styleLayer('mapbox://styles/connor0000/ck3m4jiiw3asr1cql3g0kwtg8').addTo(map);
 
@@ -30,14 +30,14 @@ L.mapbox.styleLayer('mapbox://styles/connor0000/ck3m4jiiw3asr1cql3g0kwtg8').addT
 
 
 
-<div id='map2' style="width: 1200px; height: 600px;"></div>
+<center><div id='map2' style="width: 600px; height: 700px;"></div></center>
 
 <script>
 L.mapbox.accessToken = 'pk.eyJ1IjoiY29ubm9yMDAwMCIsImEiOiJjazJwYnM0eHQwMm8xM2VteXJ3ZXd0OXEwIn0.-CAXKsJFls6ZCfjqJNch9A';
 var map2 = L.mapbox.map('map2')
-    .setView([47.355876, -122.027616], 7);
+    .setView([47.355876, -122.027616], 8);
 
-L.mapbox.styleLayer('mapbox://styles/examples/cji3d7gpt1i8m2rn7l7w0vl99').addTo(map2);
+L.mapbox.styleLayer('mapbox://styles/connor0000/ck3m4jiiw3asr1cql3g0kwtg8').addTo(map2);
 
   $.getJSON("volcanic.geojson",function(data){
     var layer = L.geoJSON(data, {
