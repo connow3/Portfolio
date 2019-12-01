@@ -26,11 +26,10 @@ L.mapbox.styleLayer('mapbox://styles/connor0000/ck3m4jiiw3asr1cql3g0kwtg8').addT
     var layer = L.geoJSON(data, {
     
      onEachFeature: function (feature, layer) {
-      layer.bindPopup("<b>Study Area:</b> " + feature.properties.STUDY_AREA + '<br/>' + "<b>Tsunami Scenario Name: </b>" + feature.properties.TSUNAMI_SCENARIO_NAME+ '<br/>' "<b>Tsunami Scenario Description: </b>" + feature.properties.TSUNAMI_SCENARIO_DESCRIPTION);
+      layer.bindPopup("<b>Study Area:</b> " + feature.properties.STUDY_AREA + '<br/>' + "<b>Tsunami Scenario Description:</b> " + feature.properties.TSUNAMI_SCENARIO_DESCRIPTION + '<br/>' + "<b>Tsunami Scenario Name: </b>" + feature.properties.TSUNAMI_SCENARIO_NAME + '<br/>');
     }
   }).addTo(map);
   });
-
 </script>
 
 <center><p style="font-size: 28px;">Lahar Flows of Washington Volcanoes</p></center>
