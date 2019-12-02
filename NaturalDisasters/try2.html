@@ -55,7 +55,7 @@ L.mapbox.styleLayer('mapbox://styles/connor0000/ck3m4jiiw3asr1cql3g0kwtg8').addT
   $.getJSON("volcanic.geojson",function(data){
     var layer = L.geoJSON(data, {
      onEachFeature: function (feature, layer) {
-      layer.bindPopup("<b>Lahar Source: </b>" + feature.properties.VOLCANO + '<br/>' + "<b>Description:</b> " + feature.properties.DESCRIPTION + '<br/>' + "<b>Learn More:</b> " + "<a target='_blank' href='" + feature.properties.Popup + "'>Click here</a>");
+      layer.bindPopup("<b>Lahar Source: </b>" + feature.properties.VOLCANO + '<br/>' + "<b>Description:</b> " + feature.properties.DESCRIPTION + '<br/>' + "<b>Learn More:</b> " + "<a target='_blank' href='" + feature.properties.HYPERLINK + "'>Click here</a>");
     }
      }).addTo(map2);
   });
