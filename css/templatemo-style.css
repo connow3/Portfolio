@@ -460,12 +460,12 @@ h3.profile-title {
 .welcome-text h2 {
   font-size: 40px;
   font-family: 'robotobold';
-  color: white;
+  color: black;
   margin-bottom: 30px;
 }
 .welcome-text h5 {
   font-size: 22px;
-  color: white;
+  color: black;
 }
 
 /*------ about us ------ */
