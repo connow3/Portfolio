@@ -301,7 +301,10 @@ hr {
 }
 
 .top-section {
-  padding: 40px;
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-bottom: 10px;
 }
 
 .profile-image {
@@ -318,14 +321,14 @@ hr {
 }
 
 h3.profile-title {
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   color: white;
   font-size: 31px;
   font-family: 'robotobold';
 }
 
 .main-navigation {
-  margin: 30px 0;
+  margin: 10px 0;
 }
 .main-navigation li {
   display: block;
@@ -352,8 +355,7 @@ h3.profile-title {
 
 .social-icons {
   display: block;
-  padding: 30px 40px;
-}
+  }
 .social-icons li {
   display: inline-block;
   margin-right: 20px;
@@ -557,6 +559,11 @@ h3.profile-title {
   font-size: 36px;
   margin-bottom: 20px;
   color: white;
+}
+.project-hover h7 {
+  font-size: 30px;
+  color: white;
+   line-height: 1;
 }
 
 
