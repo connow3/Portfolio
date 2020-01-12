@@ -14,10 +14,10 @@ function onLocationFound(e) {
         .bindPopup("You are within " + Math.round(radius * 3.28084) + " feet from this point").openPopup(); //this binds a popup to the marker. The text of the popup is defined here as well. Note that we multiply the radius by 3.28084 to convert the radius from meters to feet and that we use Math.round to round the conversion to the nearest whole number.
 
         if (radius <= 100) {
-          L.circle(e.latlng, radius, [color: 'green'}).addTo(map);
+          L.circle(e.latlng, radius, {color: 'green'}).addTo(map);
       }
       else{
-          L.circle(e.latlng, radius, {color: 'red'}).addTo(mymap);
+          L.circle(e.latlng, radius, {color: 'red'}).addTo(map);
       }
 }
 
