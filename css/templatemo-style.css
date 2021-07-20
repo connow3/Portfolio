@@ -556,8 +556,9 @@ h3.profile-title {
 
 }
 .project-hover h5 {
-  font-size: 50%;
+  font-size: 50vw;
   margin-bottom: 20px;
+  margin-top: 20px;
   color: white;
 }
 .project-hover h7 {
