@@ -21,23 +21,22 @@
 <div id="mapid" style="width: 1200px; height: 600px;"></div>
 <script>
 
-//my Mapbox token
-		mapboxgl.accessToken = 'pk.eyJ1IjoiY29ubm9yMDAwMCIsImEiOiJjazJwYnM0eHQwMm8xM2VteXJ3ZXd0OXEwIn0.-CAXKsJFls6ZCfjqJNch9A';
+	var mymap = L.map('mapid').setView([47.037884, -122.136677], 10);
 
-		//The map variable, set initial style, center/zoom
-		var map = new mapboxgl.Map({
-				container: 'map',
-				style: 'mapbox://styles/connor0000/ck36m9eqa17y81cnnyvaa7xrr', // stylesheet location
-				center: [40.866667, 34.566667], // starting position [lng, lat]
-				zoom: 1.2 // starting zoom
-	}).addTo(map);
+	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 18,
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox.streets'
+	}).addTo(mymap);
 
   $.getJSON("Fish.json",function(data){
     var layer = L.geoJSON(data, {
     onEachFeature: function (feature, layer) {
       layer.bindPopup("Stream Name: " + feature.properties.LLID_STRM_ + '<br/>' + "Species: " + feature.properties.SPECIES + '<br/>' + "Distribution Type: " + feature.properties.DISTTYPE_D + '<br/>' + "Use Type: " + feature.properties.USETYPE_DE + '<br/>' + "Life History: " + feature.properties.LIFEHIST_D);
     }
-  }).addTo(map);
+  }).addTo(mymap);
   });
 
 L.MakiMarkers.accessToken = "pk.eyJ1IjoiY29ubm9yMDAwMCIsImEiOiJjazJwYnM0eHQwMm8xM2VteXJ3ZXd0OXEwIn0.-CAXKsJFls6ZCfjqJNch9A";
@@ -54,7 +53,7 @@ L.MakiMarkers.accessToken = "pk.eyJ1IjoiY29ubm9yMDAwMCIsImEiOiJjazJwYnM0eHQwMm8x
           marker.bindPopup("Comments: " + feature.properties.COMMENTS  + '<br/>' + "Feet from Fish Sensitive Area: " + feature.properties.DIST_FT);
           return marker;
     }
-  }  ).addTo(map);
+  }  ).addTo(mymap);
   });
 
 </script>
