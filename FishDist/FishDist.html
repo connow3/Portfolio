@@ -21,22 +21,23 @@
 <div id="mapid" style="width: 1200px; height: 600px;"></div>
 <script>
 
-	var mymap = L.map('mapid').setView([47.037884, -122.136677], 10);
+//my Mapbox token
+		mapboxgl.accessToken = 'pk.eyJ1IjoiY29ubm9yMDAwMCIsImEiOiJjazJwYnM0eHQwMm8xM2VteXJ3ZXd0OXEwIn0.-CAXKsJFls6ZCfjqJNch9A';
 
-	L.tileLayer('https://api.mapbox.com/styles/v1/connor0000/ck39m5dau0ce91cqire3lp39q.html?fresh=true&title=view&access_token=pk.eyJ1IjoiY29ubm9yMDAwMCIsImEiOiJjazJwYnM0eHQwMm8xM2VteXJ3ZXd0OXEwIn0.-CAXKsJFls6ZCfjqJNch9A', {
-		maxZoom: 18,
-		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-		id: 'mapbox.streets'
-	}).addTo(mymap);
+		//The map variable, set initial style, center/zoom
+		var map = new mapboxgl.Map({
+				container: 'map',
+				style: 'mapbox://styles/connor0000/ck36m9eqa17y81cnnyvaa7xrr', // stylesheet location
+				center: [40.866667, 34.566667], // starting position [lng, lat]
+				zoom: 1.2 // starting zoom
+	}).addTo(map);
 
   $.getJSON("Fish.json",function(data){
     var layer = L.geoJSON(data, {
     onEachFeature: function (feature, layer) {
       layer.bindPopup("Stream Name: " + feature.properties.LLID_STRM_ + '<br/>' + "Species: " + feature.properties.SPECIES + '<br/>' + "Distribution Type: " + feature.properties.DISTTYPE_D + '<br/>' + "Use Type: " + feature.properties.USETYPE_DE + '<br/>' + "Life History: " + feature.properties.LIFEHIST_D);
     }
-  }).addTo(mymap);
+  }).addTo(map);
   });
 
 L.MakiMarkers.accessToken = "pk.eyJ1IjoiY29ubm9yMDAwMCIsImEiOiJjazJwYnM0eHQwMm8xM2VteXJ3ZXd0OXEwIn0.-CAXKsJFls6ZCfjqJNch9A";
@@ -53,7 +54,7 @@ L.MakiMarkers.accessToken = "pk.eyJ1IjoiY29ubm9yMDAwMCIsImEiOiJjazJwYnM0eHQwMm8x
           marker.bindPopup("Comments: " + feature.properties.COMMENTS  + '<br/>' + "Feet from Fish Sensitive Area: " + feature.properties.DIST_FT);
           return marker;
     }
-  }  ).addTo(mymap);
+  }  ).addTo(map);
   });
 
 </script>
